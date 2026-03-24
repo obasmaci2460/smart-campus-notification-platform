@@ -1,0 +1,39 @@
+# ==========================================
+# 1. API (FastAPI / Python) İÇİN KURALLAR
+# ==========================================
+api/.env
+*.env
+api/venv/
+api/env/
+api/__pycache__/
+*.py[cod]
+*$py.class
+api/uploads/
+
+# ==========================================
+# 2. CAMPUS_APP (Flutter / Dart) İÇİN KURALLAR
+# ==========================================
+campus_app/.dart_tool/
+campus_app/.idea/
+campus_app/build/
+campus_app/.pub-cache/
+campus_app/.pub/
+campus_app/.flutter-plugins
+campus_app/.flutter-plugins-dependencies
+campus_app/android/key.properties
+campus_app/ios/Runner/GeneratedPluginRegistrant.h
+
+# ==========================================
+# 3. İŞLETİM SİSTEMİ VE GENEL ÇÖP DOSYALAR
+# ==========================================
+.DS_Store
+Thumbs.db
+*.sqlite3
+*.db
+
+# ==========================================
+# 4. DATABASE SEED SCRIPTS (Faker Veri Üreticisi)
+# ==========================================
+db/seeds/faker_seed_data/.env
+db/seeds/faker_seed_data/venv/
+db/seeds/faker_seed_data/__pycache__/

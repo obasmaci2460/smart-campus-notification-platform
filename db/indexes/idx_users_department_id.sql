@@ -1,0 +1,1 @@
+CREATE NONCLUSTERED INDEX idx_users_department_id ON users(department_id) 

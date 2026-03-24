@@ -1,0 +1,1 @@
+CREATE NONCLUSTERED INDEX idx_status_history_changed_at ON status_history(changed_at DESC)	

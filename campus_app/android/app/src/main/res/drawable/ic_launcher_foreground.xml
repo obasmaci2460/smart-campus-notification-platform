@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Beyaz kutu - splash_icon ile aynı -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,20 L84,20 Q88,20 88,24 L88,84 Q88,88 84,88 L24,88 Q20,88 20,84 L20,24 Q20,20 24,20 Z" />
+    <!-- Material Icons - School -->
+    <group
+        android:translateX="30"
+        android:translateY="30"
+        android:scaleX="2"
+        android:scaleY="2">
+        <path
+            android:fillColor="#4F46E5"
+            android:pathData="M5,13.18v4L12,21l7,-3.82v-4L12,17L5,13.18zM12,3L1,9l11,6l9,-4.91V17h2V9L12,3z"/>
+    </group>
+</vector>

@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+.pytest_cache/
+*.pyc
+
+# Flutter
+flutter/campus_app/.dart_tool/
+flutter/campus_app/.flutter-plugins
+flutter/campus_app/.flutter-plugins-dependencies
+flutter/campus_app/.packages
+flutter/campus_app/build/
+flutter/campus_app/ios/Pods/
+flutter/campus_app/ios/.symlinks/
+flutter/campus_app/android/.gradle/
+flutter/campus_app/android/app/build/
+flutter/campus_app/.metadata
+flutter/campus_app/pubspec.lock
+
+# Database
+DB/*.db
+DB/*.sqlite
+DB/*.db-journal
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+
+# Documents
+*.docx
+*.pdf
+
+# Antigravity brain folder
+.gemini/
