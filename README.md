@@ -609,7 +609,7 @@ Uygulamanın arka planında yüksek performanslı bir FastAPI sunucusu ve coğra
 Veritabanı tamamen normalize edilmiştir. Kullanıcı denetimi için `failed_login_attempts`, sistem takibi için `status_history` ve yöneticilerin iletişim notları için `admin_notes` tabloları ilişkisel olarak tasarlanmıştır.
 
 <p align="center">
-  <img src="docs/image_d6ce3d.png" width="85%" alt="ER Diagram">
+  <img src="docs/ER.png" width="85%" alt="ER Diagram">
 </p>
 
 ### RESTful API (Swagger Docs)
@@ -618,9 +618,11 @@ Tüm client-server iletişimi Pydantic şemaları ile mühürlenmiş, JWT token 
 <details>
 <summary><b>API Endpoint Dokümantasyonunu Görmek İçin Tıklayın</b></summary>
 <p align="center">
-  <img src="docs/Screenshot 2026-03-24 103032.png" width="90%">
-  <img src="docs/Screenshot 2026-03-24 103056.png" width="90%">
-  <img src="docs/Screenshot 2026-03-24 103106.png" width="90%">
+  <img src="docs/DOCS1.png" width="90%">
+  <br>
+  <img src="docs/DOCS2.png" width="90%">
+  <br>
+  <img src="docs/DOCS3.png" width="90%">
 </p>
 </details>
 
