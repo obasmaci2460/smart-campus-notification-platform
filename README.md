@@ -718,4 +718,51 @@ Role-Based Access Control (RBAC) yetkilendirmeleri ve kullanıcı tercihlerinin 
 </p>
 
 ---
+
+## 🛠️ How to Run / Nasıl Çalıştırılır?
+
+Bu proje **Backend (FastAPI)**, **Frontend (Flutter)** ve **Database (MSSQL)** klasörlerinden oluşan bir monorepo yapısındadır. Sistemi yerel ortamınızda ayağa kaldırmak için aşağıdaki teknik adımları izleyin:
+
+---
+
+### 1. Database Setup (MSSQL) 🗄️
+Veritabanı katmanı, konumsal veriler için **Spatial Data Types** kullanmaktadır.
+
+* **Şema Oluşturma:** `db/tables/` altındaki SQL scriptlerini sırayla çalıştırarak ilişkisel tablo yapısını kurun.
+* **Mantıksal Yapılar:** `db/sp/` (Stored Procedures), `db/triggers/` ve `db/indexes/` altındaki scriptleri uygulayarak veritabanı motoru üzerindeki iş mantığını ve performans optimizasyonlarını aktif hale getirin.
+* **Temel Veriler:** Uygulamanın çalışması için gerekli olan sabitleri (Birimler, Kategoriler, Durumlar) `db/seeds/` altındaki SQL dosyaları ile içeri aktararak tablo yapılarının işlevselliğini sağlayın.
+* **Test Verisi Üretimi (Faker):** Geliştirme ortamı için 100+ rastgele bildirim üretmek isterseniz:
+    ```bash
+    cd db/seeds/faker_seed_data
+    # Sanal ortamı aktif edin ve .env dosyasını yapılandırın
+    python learn_faker_library.py
+    ```
+
+---
+
+### 2. Backend Setup (FastAPI) 🐍
+Backend, Pydantic modelleri ile mühürlenmiş ve JWT tabanlı güvenlik katmanıyla korunmaktadır.
+
+* **Ortam Hazırlığı:** `api/` dizinine gidin, bir `venv` oluşturun ve `requirements.txt` paketlerini yükleyin.
+* **Konfigürasyon:** `api/.env` dosyasını oluşturun; `DATABASE_URL` (MSSQL Connection String) ve `JWT_SECRET` değişkenlerini tanımlayın.
+* **Sunucuyu Başlatma:**
+    ```bash
+    uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    ```
+* **Dış Dünyaya Erişim (Ngrok):** Mobil cihazınızın yerel sunucuya erişebilmesi için **Ngrok** kullanarak yerel 8000 portunu global bir URL'ye yönlendirin.
+
+---
+
+### 3. Frontend Setup (Flutter) 📱
+Mobil uygulama, Google Maps entegrasyonu ve donanım izinleri (Konum, Kamera) gerektirir.
+
+* **Bağımlılıklar:** `campus_app/` dizininde `flutter pub get` komutu ile gerekli paketleri indirin.
+* **Harita Entegrasyonu:** `AndroidManifest.xml` (Android) ve `AppDelegate.swift` (iOS) dosyalarına kendi **Google Maps API Key**'inizi ekleyin.
+* **API Bağlantısı:** Uygulama içerisindeki API URL bilgisini kendi **Ngrok** adresinizle güncelleyerek tünel üzerinden iletişimi sağlayın.
+* **Çalıştırma:** Cihazınız bağlıyken terminale şu komutu girin:
+    ```bash
+    flutter run
+    ```
+
+---
 *Developed by Ömer Basmacı - 2026*
